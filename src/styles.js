@@ -5,7 +5,6 @@ export const styles = StyleSheet.create({
         flex:1,
         alignItem: 'center',
         justifyContent: 'center',
-        padding: 20
     },
     h1:{
         fontSize: 40,
@@ -40,6 +39,7 @@ export const styles = StyleSheet.create({
         margin: 17
     },
     sectName:{
+        marginLeft: 10,
         fontSize: 25,
         color: '#52006A'
     },
@@ -48,21 +48,38 @@ export const styles = StyleSheet.create({
         height: 160,
         backgroundColor: '#52006A',
         borderRadius: 25,
-        padding: 10,
-        margin: 10
+        paddingTop: 10,
+        paddingLeft: 10,
+        margin: 10,
+        flex: 1,
+        alignContent: "center",
+        justifyContent: 'center'
     },
     large:{
-        width: 240,
-        height: 350,
-        backgroundColor: '#52006A',
+        width: 280,
+        height: 390,
+        backgroundColor: '#FF7600',
         borderRadius: 25,
         padding: 10,
-        margin: 10
+        margin: 10,
+        flex: 1,
+        alignContent: "center",
+        justifyContent: 'center'
     },
     graph:{
         width: 340,
         height: 180, 
         backgroundColor: '#52006A',
         borderRadius: 25,
+        margin: 10,
+        padding: 15
+    },
+    smallimg:{
+        width: 120,
+        height: 120
+    },
+    largeimg:{
+        width: 330,
+        height: 140
     }
 })

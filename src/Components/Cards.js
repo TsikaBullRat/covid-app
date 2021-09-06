@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, ScrollView, Image } from 'react-native'
 import { styles } from '..'
 
 const Head = () => {
@@ -20,16 +20,29 @@ const Graph = () =>{
     )
 }
 
-const Tile = ({ size, children }) => {
+const Tile = ({ size, data }) => {
+
+    const style = size === "small" ?styles.small :size === "large" ? styles.large: null
+    const img = size === "small" ?styles.smallimg :size === "large" ? styles.largeimg: null
     return (
         <View
-            style={size === "small" ? styles.small : styles.large}
+            style={ style }
         >
             <Text style={styles.h5}>
-                {children}
+                {size === "small" ?data.textshort:null}
             </Text>
+            <Image source={data.img} style={img}/>
+            {size === "large" ?<Text style={styles.h5}>{data.text}</Text>:null }
         </View>
     );
+}
+
+const QuickTab = () =>{
+    return(
+        <View>
+            <Text>Find out more now</Text>
+        </View>
+    )
 }
 
 const Sect = ({ name, children, Nav }) => {
@@ -46,4 +59,4 @@ const Sect = ({ name, children, Nav }) => {
     )
 }
 
-export { Head, Sect, Tile, Graph }
+export { Head, Sect, Tile, Graph, QuickTab }

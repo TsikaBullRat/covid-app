@@ -1,6 +1,14 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, ScrollView } from 'react-native'
+import { precautions, Tile, Sect } from '..'
 
-export const Prevention = () =>{
-    return <Text>Hello Prevention</Text>
+export const Prevention = () => {
+    console.log(precautions)
+    return (
+        <ScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}>
+            {precautions.map(item =><Tile size="large" data={item} key={item.id} />)}
+        </ScrollView>
+    )
 }
