@@ -57,10 +57,10 @@ export const styles = StyleSheet.create({
     },
     large:{
         width: 280,
-        height: 390,
+        height: 500,
         backgroundColor: '#FF7600',
         borderRadius: 25,
-        padding: 10,
+        // padding: 10,
         margin: 10,
         flex: 1,
         alignContent: "center",
@@ -79,7 +79,7 @@ export const styles = StyleSheet.create({
         height: 120
     },
     largeimg:{
-        width: 330,
-        height: 140
+        width: 300,
+        height: 350
     }
 })

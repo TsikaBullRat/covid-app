@@ -74,9 +74,9 @@ const precautions =[
 ]
 
 const getData = async(Callback) =>{
-    const data = await fetch("https://corona-stats.mobi/api/json.2.0.php?key=z9OPIVQStmHLhZdRwokn")
+    // const data = await fetch("https://corona-stats.mobi/api/json.2.0.php?key=z9OPIVQStmHLhZdRwokn")
+    const data = await fetch("https://coronavirus-19-api.herokuapp.com/countries/South%20Africa")
     const stats = await data.json()
-    data.catch(err=>console.log(err))
 
     // const data = new XMLHttpRequest()
     // data.open('GET', 'https://corona-stats.mobi/api/json.2.0.php?key=z9OPIVQStmHLhZdRwokn')
@@ -96,6 +96,7 @@ const getData = async(Callback) =>{
     // const stats = await data.json()
 
     console.log(stats)
+    Callback(stats)
   }
 
 export { precautions, getData }
