@@ -12,7 +12,7 @@ export default function App() {
 
   const [stats, getStats] = useState(null)
   useEffect(()=>{
-    getData(getStats)
+    getData(getStats, "South Africa")
   },[])
 
   console.log(stats)
@@ -22,10 +22,13 @@ export default function App() {
         <NavigationContainer style={styles.body}>
           <Drawer.Navigator
             drawerContent={props => <NavButton {...props} />}
+            initialRouteName="Info"
           >
             <Drawer.Screen name="Home" component={Home} />
             <Drawer.Screen name="Prevention" component={Prevention} />
-            <Drawer.Screen name="Stats" component={Stats} />
+            <Drawer.Screen name="Stats" >
+              {props=><Stats {...props} stats={stats} />}
+            </Drawer.Screen>
             <Drawer.Screen name="Info" component={Info} />
           </Drawer.Navigator>
         </NavigationContainer>

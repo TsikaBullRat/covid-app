@@ -81,5 +81,67 @@ export const styles = StyleSheet.create({
     largeimg:{
         width: 300,
         height: 350
+    },
+    stats:{
+        flexDirection: 'row',
+        height: 200,
+        width: '90%',
+        marginLeft: 20,
+        marginTop: 20
+    },
+    shortside:{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#FFA900',
+        width: 5000,
+        height: '100%',
+        borderRadius: 25
+    },
+    longside:{
+        borderTopEndRadius: 25,
+        borderBottomEndRadius: 25,
+        borderWidth: 5,
+        borderColor: '#FFA900',
+        width: '60%',
+        height: '90%',
+        position: 'relative',
+        top: 10,
+        left:-5,
+        backgroundColor: '#fff',
+        padding: 10
+    },
+    search:{
+        flexDirection: 'row',
+        width: 500,
+        height: 40,
+        marginTop: 20,
+        marginLeft: 10
+    },
+    searchInput:{
+        padding: 10,
+        borderColor: '#FFA900',
+        borderBottomStartRadius: 25,
+        borderTopStartRadius: 25,
+        borderWidth: 3,
+        width: 250,
+        height: '100%',
+        backgroundColor: '#fff',
+        fontSize: 20
+    },
+    searchButton:{
+        backgroundColor: '#FFA900',
+        width: 80,
+        height: '100%',
+        borderBottomEndRadius: 25,
+        borderTopEndRadius: 25,
+        padding: 5
+    },
+    searchText:{
+        color: '#fff',
+        fontSize: 20
+    },
+    statText:{
+        fontSize: 18
     }
 })
