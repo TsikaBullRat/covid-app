@@ -6,7 +6,8 @@ export { Info } from './Pages/Info';
 
 //Components
 export { NavButton } from './Components/NavButton';
-export { Head, Sect, Tile, Graph, QuickTab, TopBulge } from './Components/Cards';
+export { Head, Sect, Tile, Graph, QuickTab, InfoCard, StatTab } from './Components/Cards';
+export { Search } from './Components/Search'
 
 //Access
 export { precautions, getData } from './Data/Data'

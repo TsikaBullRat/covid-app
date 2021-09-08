@@ -12,10 +12,10 @@ const Head = () => {
     )
 }
 
-const TopBulge = () =>{
+const InfoCard = () =>{
     return(
-        <View style={styles.top}>
-
+        <View>
+            
         </View>
     )
 }
@@ -67,4 +67,21 @@ const Sect = ({ name, children, Nav }) => {
     )
 }
 
-export { Head, Sect, Tile, Graph, QuickTab, TopBulge }
+const StatTab = ({data}) =>{
+
+
+    return(
+        <View style={styles.stats}>
+            <View style={styles.shortside}>
+                <Text style={styles.h3}>{data.label}</Text>
+            </View>
+            <View style={styles.longside}>
+                <Text style={styles.statText}>{`${Object.keys(data)[1]}: ${data.label === "Today"?data.Active:data.Cases}`}</Text>
+                <Text style={styles.statText}>{`${Object.keys(data)[2]}: ${data.label === "Today"?data.Cases:data.Deaths}`}</Text>
+                <Text style={styles.statText}>{`${Object.keys(data)[3]}: ${data.label === "Today"?data.Deaths:data.Recovery}`}</Text>
+            </View>
+        </View>
+    )
+}
+
+export { Head, Sect, Tile, Graph, QuickTab, InfoCard, StatTab }
