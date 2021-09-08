@@ -12,6 +12,14 @@ const Head = () => {
     )
 }
 
+const TopBulge = () =>{
+    return(
+        <View style={styles.top}>
+
+        </View>
+    )
+}
+
 const Graph = () =>{
     return(
         <View style={styles.graph}>
@@ -59,4 +67,4 @@ const Sect = ({ name, children, Nav }) => {
     )
 }
 
-export { Head, Sect, Tile, Graph, QuickTab }
+export { Head, Sect, Tile, Graph, QuickTab, TopBulge }

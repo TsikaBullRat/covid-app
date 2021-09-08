@@ -81,5 +81,13 @@ export const styles = StyleSheet.create({
     largeimg:{
         width: 300,
         height: 350
+    },
+    top:{
+        marginLeft: -50,
+        width: '130%',
+        height: 280,
+        backgroundColor: '#CD113B',
+        borderBottomLeftRadius: 200,
+        borderBottomRightRadius: 200
     }
 })
